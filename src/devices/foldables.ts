@@ -1,0 +1,123 @@
+import type { Device } from "./types";
+
+const gestureBar = {
+  kind: "home-indicator" as const,
+  widthPx: 200,
+  heightPx: 4,
+  bottomOffsetPx: 8,
+};
+
+export const foldables: Device[] = [
+  {
+    id: "galaxy-z-fold-5",
+    name: "Galaxy Z Fold 5 (unfolded)",
+    brand: "Samsung",
+    category: "foldable",
+    viewport: { width: 884, height: 1104 },
+    dpr: 2.6,
+    bezel: { radius: 20, thickness: 14, color: "#0a0a0e" },
+    safeArea: { top: 32, right: 0, bottom: 24, left: 0 },
+    features: [
+      {
+        kind: "hole-punch",
+        diameterPx: 22,
+        position: "top-right",
+        topOffsetPx: 14,
+      },
+      gestureBar,
+    ],
+    supportsRotation: true,
+  },
+  {
+    id: "galaxy-z-fold-5-folded",
+    name: "Galaxy Z Fold 5 (folded)",
+    brand: "Samsung",
+    category: "foldable",
+    viewport: { width: 368, height: 946 },
+    dpr: 2.6,
+    bezel: { radius: 44, thickness: 12, color: "#0a0a0e" },
+    safeArea: { top: 40, right: 0, bottom: 24, left: 0 },
+    features: [
+      {
+        kind: "hole-punch",
+        diameterPx: 22,
+        position: "top-center",
+        topOffsetPx: 12,
+      },
+      { ...gestureBar, widthPx: 108 },
+    ],
+    supportsRotation: true,
+  },
+  {
+    id: "galaxy-z-fold-6",
+    name: "Galaxy Z Fold 6 (unfolded)",
+    brand: "Samsung",
+    category: "foldable",
+    viewport: { width: 900, height: 1118 },
+    dpr: 2.6,
+    bezel: { radius: 22, thickness: 14, color: "#0a0a0e" },
+    safeArea: { top: 32, right: 0, bottom: 24, left: 0 },
+    features: [
+      {
+        kind: "hole-punch",
+        diameterPx: 22,
+        position: "top-right",
+        topOffsetPx: 14,
+      },
+      gestureBar,
+    ],
+    supportsRotation: true,
+  },
+  {
+    id: "pixel-9-pro-fold",
+    name: "Pixel 9 Pro Fold (unfolded)",
+    brand: "Google",
+    category: "foldable",
+    viewport: { width: 844, height: 1104 },
+    dpr: 2.5,
+    bezel: { radius: 22, thickness: 14, color: "#0a0a0e" },
+    safeArea: { top: 32, right: 0, bottom: 24, left: 0 },
+    features: [
+      {
+        kind: "hole-punch",
+        diameterPx: 22,
+        position: "top-right",
+        topOffsetPx: 14,
+      },
+      gestureBar,
+    ],
+    supportsRotation: true,
+  },
+  {
+    id: "pixel-10-pro-fold",
+    name: "Pixel 10 Pro Fold (unfolded)",
+    brand: "Google",
+    category: "foldable",
+    viewport: { width: 856, height: 1120 },
+    dpr: 2.5,
+    bezel: { radius: 22, thickness: 14, color: "#0a0a0e" },
+    safeArea: { top: 32, right: 0, bottom: 24, left: 0 },
+    features: [
+      {
+        kind: "hole-punch",
+        diameterPx: 22,
+        position: "top-right",
+        topOffsetPx: 14,
+      },
+      gestureBar,
+    ],
+    supportsRotation: true,
+  },
+  {
+    id: "surface-duo-2",
+    name: "Surface Duo 2",
+    brand: "Microsoft",
+    category: "foldable",
+    viewport: { width: 540, height: 720 },
+    dpr: 2.5,
+    bezel: { radius: 12, thickness: 12, color: "#0a0a0e" },
+    safeArea: { top: 24, right: 0, bottom: 16, left: 0 },
+    features: [],
+    supportsRotation: true,
+  },
+];
