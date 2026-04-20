@@ -1,4 +1,4 @@
-# restest
+# ResTest
 
 A responsive testing tool that renders any URL inside realistic device frames — iPhones, Androids, tablets, foldables, and desktop — side by side in a single grid.
 
