@@ -104,9 +104,12 @@ export function DeviceGrid() {
     let scrollTop = 0;
 
     const onKeyDown = (e: KeyboardEvent) => {
-      if (e.code !== "Space" || e.repeat) return;
+      if (e.code !== "Space") return;
       if (isTyping(e.target)) return;
+      // Prevent the browser's native space-bar page scroll on every keydown,
+      // including auto-repeats while the key is held during a pan.
       e.preventDefault();
+      if (e.repeat) return;
       panReadyRef.current = true;
       setPanReady(true);
     };
